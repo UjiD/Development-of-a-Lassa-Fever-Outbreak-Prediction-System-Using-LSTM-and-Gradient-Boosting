@@ -51,12 +51,31 @@ Time-Series Simulation / Predictive Modelling
 ## Background Studies
 ### Time-Series Forecasting
 Using LSTM to predict future outbreaks based on past data.
+Time-series forecasting using Long Short-Term Memory (LSTM) networks is a powerful deep learning approach for predicting future disease outbreaks like Lassa fever by analyzing historical patterns. LSTMs are particularly effective for this task because they can capture long-term dependencies and temporal trends in sequential data, remembering important information over extended periods while forgetting irrelevant details. When applied to epidemiological data, these neural networks analyze past outbreak records, seasonal fluctuations, and case trajectories to forecast future infection rates. The model processes time-stamped case numbers as input sequences, learns the underlying patterns of disease spread, and generates predictions for upcoming time periods. This technique outperforms traditional statistical methods by handling complex, non-linear relationships in the data and automatically adapting to changing disease dynamics. For Lassa fever specifically, LSTM-based forecasting can help public health officials anticipate outbreaks months in advance by recognizing early warning signs in the temporal patterns of cases, enabling proactive resource allocation and intervention strategies in high-risk regions during vulnerable seasons. The model's ability to learn from multi-year data while accounting for seasonal variations makes it particularly valuable for diseases with strong environmental influences.
 
 ### Predictive Modelling
 Using XGBoost to analyze tabular clinical and environmental data for outbreak prediction.
+Predictive Modeling
+Using XGBoost to analyze tabular clinical and environmental data helps predict Lassa fever outbreaks by learning patterns from structured datasets. Unlike time-series models, XGBoost works well with features like temperature, humidity, rodent population, and healthcare quality. It builds decision trees to identify key risk factors and classify whether an outbreak is likely, making it fast and interpretable for public health decisions.
 
 ### Hybrid Model
 Combination of LSTM for time-series and XGBoost for tabular analysis.
+Hybrid Model
+A hybrid model combines the strengths of LSTM (for time-series data) and XGBoost (for tabular data). The LSTM captures trends in past outbreak cases, while XGBoost analyzes environmental and clinical factors. By merging their predictions, the model improves accuracy, offering both temporal forecasting and feature-based risk assessment for better outbreak preparedness.
 
 ### Evaluation Metrics
 Accuracy, precision, recall, F1-score, ROC AUC.
+Evaluation Metrics
+To measure model performance, we use:
+
+Accuracy: Overall correctness of predictions.
+
+Precision: How many predicted outbreaks were real? (Avoiding false alarms)
+
+Recall: How many real outbreaks were correctly predicted? (Avoiding missed outbreaks)
+
+F1-score: Balance between precision and recall.
+
+ROC AUC: Model’s ability to distinguish between outbreak and non-outbreak scenarios.
+
+These metrics ensure the model is reliable before real-world deployment.
